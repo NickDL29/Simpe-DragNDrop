@@ -1,0 +1,136 @@
+body{
+    background-color: antiquewhite;
+}
+
+.m_container {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m_container h2{
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.container {
+    width: 200px;
+    height: 300px;
+    border: 2px solid #00538b;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    border-radius: 20px;
+    background-color: #b1dae7;
+}
+
+.item {
+    background-color: #ffffff;
+    border: 1px solid #999;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    cursor: grab;
+    transition: transform 0.3s ease-in-out;
+    user-select: none;
+}
+
+.item:active {
+    cursor: grabbing;
+}
+
+.item.dragging {
+    cursor: grabbing;
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta {
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.95);
+}
+
+.msg {
+    padding: 5px;
+    background-color: rgb(169, 255, 169);
+    border: 1px solid rgb(0, 105, 0);
+    border-radius: 15px;
+}
+
+.newdiv {
+    margin: 8px;
+}
